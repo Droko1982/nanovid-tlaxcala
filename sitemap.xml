@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://droko1982.github.io/nanovid-tlaxcala/</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://droko1982.github.io/nanovid-tlaxcala/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://droko1982.github.io/nanovid-tlaxcala/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="nah"   href="https://droko1982.github.io/nanovid-tlaxcala/?lang=na"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://droko1982.github.io/nanovid-tlaxcala/"/>
     <lastmod>2026-05-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://droko1982.github.io/nanovid-tlaxcala/?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://droko1982.github.io/nanovid-tlaxcala/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://droko1982.github.io/nanovid-tlaxcala/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="nah"   href="https://droko1982.github.io/nanovid-tlaxcala/?lang=na"/>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://droko1982.github.io/nanovid-tlaxcala/?lang=na</loc>
+    <xhtml:link rel="alternate" hreflang="es-mx" href="https://droko1982.github.io/nanovid-tlaxcala/?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="en"    href="https://droko1982.github.io/nanovid-tlaxcala/?lang=en"/>
+    <xhtml:link rel="alternate" hreflang="nah"   href="https://droko1982.github.io/nanovid-tlaxcala/?lang=na"/>
+    <lastmod>2026-05-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://droko1982.github.io/nanovid-tlaxcala/privacidad.html</loc>

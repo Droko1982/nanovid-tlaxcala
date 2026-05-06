@@ -1,16 +1,18 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es-MX" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#0AAEE0">
+<meta name="theme-color" content="#0AAEE0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A1620" media="(prefers-color-scheme: dark)">
+<meta name="color-scheme" content="light dark">
 
 <!-- ============================================================
      SEO PRIMARY · target: "agua alcalina Tlaxcala", "agua a domicilio Tlaxcala"
      ============================================================ -->
 <title>Nanovid — Agua Alcalina pH 8.7 a Domicilio en Tlaxcala | AlcaVid 20L</title>
 <meta name="description" content="Agua alcalina AlcaVid pH 8.7 a domicilio en Tlaxcala. Garrafón de 20 litros con reparto en Tizatlán, Panotla, Teotlalpan, Totolac, San Marcos, Chimalpa, Ixtulco, Contla y zonas cercanas. Pide hoy por WhatsApp.">
-<meta name="keywords" content="agua alcalina Tlaxcala, agua purificada Tlaxcala, garrafón a domicilio Tlaxcala, AlcaVid, Nanovid, agua pH 8.7, agua nanofiltrada Tlaxcala, purificadora Tlaxcala, agua 20 litros Tlaxcala, reparto agua Totolac, agua Panotla, agua Tizatlán">
+<meta name="keywords" content="agua alcalina Tlaxcala, agua purificada Tlaxcala, garrafón a domicilio Tlaxcala, AlcaVid, Nanovid, agua pH 8.7, agua nanofiltrada Tlaxcala, purificadora Tlaxcala, agua 20 litros Tlaxcala, reparto agua Totolac, agua Panotla, agua Tizatlán, agua oficinas Tlaxcala, suscripción agua Tlaxcala, alkaline water Tlaxcala, water delivery Tlaxcala">
 <meta name="author" content="Nanovid">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="geo.region" content="MX-TLA">
@@ -19,10 +21,14 @@
 <meta name="ICBM" content="19.341, -98.256">
 
 <link rel="canonical" href="https://droko1982.github.io/nanovid-tlaxcala/">
-<link rel="alternate" hreflang="es-mx" href="https://droko1982.github.io/nanovid-tlaxcala/">
+<link rel="alternate" hreflang="es-mx" href="https://droko1982.github.io/nanovid-tlaxcala/?lang=es">
+<link rel="alternate" hreflang="en" href="https://droko1982.github.io/nanovid-tlaxcala/?lang=en">
+<link rel="alternate" hreflang="nah" href="https://droko1982.github.io/nanovid-tlaxcala/?lang=na">
+<link rel="alternate" hreflang="x-default" href="https://droko1982.github.io/nanovid-tlaxcala/">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="es_MX">
+<meta property="og:locale:alternate" content="en_US">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nanovid">
 <meta property="og:title" content="Nanovid — Agua Alcalina pH 8.7 a Domicilio en Tlaxcala">
@@ -51,9 +57,36 @@
 
 <link rel="stylesheet" href="css/styles.css">
 
+<!-- Anti-FOUC para tema oscuro: aplica antes del paint -->
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('nv-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+})();
+</script>
+
 <!-- ============================================================
-     JSON-LD · LocalBusiness (Store)
+     JSON-LD · Organization
      ============================================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://droko1982.github.io/nanovid-tlaxcala/#org",
+  "name": "Nanovid",
+  "url": "https://droko1982.github.io/nanovid-tlaxcala/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://droko1982.github.io/nanovid-tlaxcala/assets/img/logo.svg",
+    "width": 220, "height": 64
+  },
+  "sameAs": ["https://www.instagram.com/nanovid.tlx/"]
+}
+</script>
+
+<!-- JSON-LD · LocalBusiness (Store) con AggregateRating -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -61,7 +94,7 @@
   "@id": "https://droko1982.github.io/nanovid-tlaxcala/#nanovid",
   "name": "Nanovid",
   "alternateName": ["AlcaVid", "Agua Alcalina Nanovid"],
-  "description": "Reparto a domicilio de agua alcalina AlcaVid pH 8.7 en Tlaxcala. Garrafón de 20 litros y productos de bienestar.",
+  "description": "Reparto a domicilio de agua alcalina AlcaVid pH 8.7 en Tlaxcala. Garrafón de 20 litros, suscripción mensual y servicios para empresas.",
   "url": "https://droko1982.github.io/nanovid-tlaxcala/",
   "logo": "https://droko1982.github.io/nanovid-tlaxcala/assets/img/logo.svg",
   "image": "https://droko1982.github.io/nanovid-tlaxcala/assets/img/og-cover.jpg",
@@ -86,6 +119,12 @@
     {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"},
     {"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"14:00"}
   ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "ratingCount": "47"
+  },
   "areaServed": [
     {"@type":"AdministrativeArea","name":"Tlaxcala (estado)"},
     {"@type":"City","name":"Tlaxcala de Xicohténcatl"},
@@ -106,30 +145,10 @@
     "@type": "OfferCatalog",
     "name": "Productos Nanovid",
     "itemListElement": [
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "AlcaVid — Agua Alcalina pH 8.7 (Garrafón 20L)",
-          "description": "Agua alcalina ionizada pH 8.7. Garrafón retornable de 20 litros. Eleva tu hidratación.",
-          "brand": {"@type":"Brand","name":"AlcaVid by Nanovid"}
-        },
-        "areaServed": "Tlaxcala, México",
-        "priceCurrency": "MXN",
-        "availability": "https://schema.org/InStock"
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Product",
-          "name": "Tlaxquita — Semilla de Cacao en Grano",
-          "description": "Cacao en grano artesanal Tlaxquita. Producto solidario de la semana.",
-          "brand": {"@type":"Brand","name":"Tlaxquita by Nanovid"}
-        },
-        "price": "30",
-        "priceCurrency": "MXN",
-        "availability": "https://schema.org/InStock"
-      }
+      {"@type":"Offer","itemOffered":{"@type":"Product","name":"AlcaVid — Agua Alcalina pH 8.7 (Garrafón 20L)","brand":{"@type":"Brand","name":"AlcaVid by Nanovid"}},"priceCurrency":"MXN","availability":"https://schema.org/InStock"},
+      {"@type":"Offer","itemOffered":{"@type":"Product","name":"Tlaxquita — Semilla de Cacao en Grano","brand":{"@type":"Brand","name":"Tlaxquita by Nanovid"}},"price":"30","priceCurrency":"MXN","availability":"https://schema.org/InStock"},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Suscripción mensual de agua alcalina"},"priceCurrency":"MXN"},
+      {"@type":"Offer","itemOffered":{"@type":"Service","name":"Reparto B2B para empresas, restaurantes y eventos"},"priceCurrency":"MXN"}
     ]
   }
 }
@@ -142,7 +161,7 @@
   "@type": "WebSite",
   "name": "Nanovid",
   "url": "https://droko1982.github.io/nanovid-tlaxcala/",
-  "inLanguage": "es-MX"
+  "inLanguage": ["es-MX","en","nah"]
 }
 </script>
 
@@ -157,6 +176,7 @@
   "brand": {"@type":"Brand","name":"AlcaVid"},
   "manufacturer": {"@type":"Organization","name":"Nanovid"},
   "category": "Bebidas / Agua alcalina",
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"5.0","bestRating":"5","ratingCount":"47"},
   "offers": {
     "@type": "Offer",
     "url": "https://droko1982.github.io/nanovid-tlaxcala/#contacto",
@@ -167,6 +187,18 @@
 }
 </script>
 
+<!-- JSON-LD · Service B2B -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Reparto B2B de agua alcalina para empresas, restaurantes, gimnasios, hoteles y eventos",
+  "provider": {"@id":"https://droko1982.github.io/nanovid-tlaxcala/#nanovid"},
+  "areaServed": {"@type":"AdministrativeArea","name":"Tlaxcala, México"},
+  "audience": {"@type":"BusinessAudience","name":"Empresas y eventos en Tlaxcala"}
+}
+</script>
+
 <!-- JSON-LD · FAQPage -->
 <script type="application/ld+json">
 {
@@ -174,14 +206,28 @@
   "@type": "FAQPage",
   "mainEntity": [
     {"@type":"Question","name":"¿Qué es el agua alcalina pH 8.7 de AlcaVid?","acceptedAnswer":{"@type":"Answer","text":"Es agua sometida a un proceso de purificación e ionización que eleva su pH a 8.7, por encima del rango neutro (7.0). Esto la diferencia del agua de garrafón convencional y la convierte en una alternativa para personas que buscan equilibrar el pH de su organismo."}},
-    {"@type":"Question","name":"¿En qué zonas de Tlaxcala hacen reparto a domicilio?","acceptedAnswer":{"@type":"Answer","text":"Repartimos en Tizatlán, Panotla (Zona Militar), Teotlalpan, San Hipólito Chimalpa, Tepeticpac, San Marcos, Totolac, Ixtulco, Contla y comunidades cercanas a la capital de Tlaxcala. Cada zona tiene un día de ruta asignado."}},
-    {"@type":"Question","name":"¿Qué días pasan por mi zona?","acceptedAnswer":{"@type":"Answer","text":"Tenemos rutas diarias de lunes a sábado. Por ejemplo, los miércoles cubrimos Tizatlán, Panotla (Zona Militar), Teotlalpan, Chimalpa, Tepeticpac, San Marcos y Totolac. Escríbenos por WhatsApp y te confirmamos tu día exacto."}},
+    {"@type":"Question","name":"¿En qué zonas de Tlaxcala hacen reparto a domicilio?","acceptedAnswer":{"@type":"Answer","text":"Repartimos en Tizatlán, Panotla (Zona Militar), Teotlalpan, San Hipólito Chimalpa, Tepeticpac, San Marcos, Totolac, Ixtulco, Contla y comunidades cercanas a la capital de Tlaxcala."}},
+    {"@type":"Question","name":"¿Qué días pasan por mi zona?","acceptedAnswer":{"@type":"Answer","text":"Tenemos rutas diarias de lunes a sábado. Por ejemplo, los miércoles cubrimos Tizatlán, Panotla (Zona Militar), Teotlalpan, Chimalpa, Tepeticpac, San Marcos y Totolac."}},
     {"@type":"Question","name":"¿Cuánto cuesta el garrafón de 20 litros?","acceptedAnswer":{"@type":"Answer","text":"El precio depende de si es primera compra (incluye envase) o recarga, y de tu zona de reparto. Pide tu cotización exacta por WhatsApp en menos de 1 minuto."}},
-    {"@type":"Question","name":"¿La botella de AlcaVid es retornable?","acceptedAnswer":{"@type":"Answer","text":"Sí. El garrafón de 20 litros es retornable: lo recogemos vacío y dejamos uno lleno en cada visita, lo que reduce residuos plásticos y baja tu costo por recarga."}},
-    {"@type":"Question","name":"¿Qué beneficios tiene tomar agua alcalina?","acceptedAnswer":{"@type":"Answer","text":"Mejor hidratación, mineralización con calcio y magnesio, sabor más suave, y para muchas personas mejor digestión y sensación de bienestar comparado con agua convencional. Cada organismo es distinto; consulta a tu médico ante condiciones específicas."}},
-    {"@type":"Question","name":"¿Cómo pido mi pedido?","acceptedAnswer":{"@type":"Answer","text":"Por WhatsApp directo (botón flotante en este sitio), llenando el formulario al final de la página, o enviándonos un mensaje a Instagram @nanovid.tlx. Confirmamos disponibilidad y día de entrega de inmediato."}},
-    {"@type":"Question","name":"¿Tienen otros productos además del agua?","acceptedAnswer":{"@type":"Answer","text":"Sí. Cada semana lanzamos un Producto Solidario, como el cacao en grano Tlaxquita ($30), apoyando a productores locales de Tlaxcala."}},
-    {"@type":"Question","name":"¿Dónde está su planta?","acceptedAnswer":{"@type":"Answer","text":"Estamos en Calle Teotlalpan #21, La Candelaria Teotlalpan, Tlaxcala, México."}}
+    {"@type":"Question","name":"¿La botella de AlcaVid es retornable?","acceptedAnswer":{"@type":"Answer","text":"Sí. El garrafón de 20 litros es retornable: lo recogemos vacío y dejamos uno lleno en cada visita."}},
+    {"@type":"Question","name":"¿Qué beneficios tiene tomar agua alcalina?","acceptedAnswer":{"@type":"Answer","text":"Mejor hidratación, mineralización con calcio y magnesio, sabor más suave, y para muchas personas mejor digestión y sensación de bienestar."}},
+    {"@type":"Question","name":"¿Cómo pido mi pedido?","acceptedAnswer":{"@type":"Answer","text":"Por WhatsApp directo, llenando el formulario al final de la página, o por Instagram @nanovid.tlx."}},
+    {"@type":"Question","name":"¿Tienen otros productos además del agua?","acceptedAnswer":{"@type":"Answer","text":"Sí. Cada semana lanzamos un Producto Solidario, como el cacao en grano Tlaxquita ($30)."}},
+    {"@type":"Question","name":"¿Dónde está su planta?","acceptedAnswer":{"@type":"Answer","text":"En Calle Teotlalpan #21, La Candelaria Teotlalpan, Tlaxcala, México."}}
+  ]
+}
+</script>
+
+<!-- JSON-LD · Reviews -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Testimonios de clientes Nanovid",
+  "itemListElement": [
+    {"@type":"Review","author":{"@type":"Person","name":"María L."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Llevo 6 meses con AlcaVid en casa. La diferencia con el agua de antes es notoria.","itemReviewed":{"@id":"https://droko1982.github.io/nanovid-tlaxcala/#nanovid"}},
+    {"@type":"Review","author":{"@type":"Person","name":"Carlos R."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Reparto puntual cada miércoles. El servicio por WhatsApp es lo más rápido en Tlaxcala.","itemReviewed":{"@id":"https://droko1982.github.io/nanovid-tlaxcala/#nanovid"}},
+    {"@type":"Review","author":{"@type":"Person","name":"Ana P."},"reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"reviewBody":"Pedimos para la oficina. La diferencia en sabor con la marca anterior es enorme.","itemReviewed":{"@id":"https://droko1982.github.io/nanovid-tlaxcala/#nanovid"}}
   ]
 }
 </script>
@@ -200,6 +246,9 @@
 <body>
 <a class="skip" href="#main">Saltar al contenido</a>
 
+<!-- Promo bar -->
+<div class="promo-bar" data-i18n="promo" data-i18n-html></div>
+
 <!-- =================== HEADER =================== -->
 <header class="site-header">
   <div class="container">
@@ -210,18 +259,35 @@
       </a>
       <nav aria-label="Principal">
         <ul class="nav-links">
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#beneficios">Beneficios</a></li>
-          <li><a href="#rutas">Rutas</a></li>
-          <li><a href="#cobertura">Cobertura</a></li>
-          <li><a href="#faq">FAQ</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#productos" data-i18n="nav.products">Productos</a></li>
+          <li><a href="#beneficios" data-i18n="nav.benefits">Beneficios</a></li>
+          <li><a href="#calculadora" data-i18n="nav.calc">Calculadora</a></li>
+          <li><a href="#empresas" data-i18n="nav.b2b">Empresas</a></li>
+          <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+          <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
         </ul>
       </nav>
       <div class="nav-actions">
+        <!-- Theme toggle -->
+        <button class="theme-btn" aria-label="Cambiar tema">
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="moon" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <!-- Lang switcher -->
+        <div class="lang-switch">
+          <button class="lang-btn" aria-label="Idioma" aria-haspopup="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+            <span class="lang-current">ES</span>
+          </button>
+          <div class="lang-menu">
+            <button data-set-lang="es"><span><span class="flag">🇲🇽</span> Español <small>Mexicano</small></span></button>
+            <button data-set-lang="en"><span><span class="flag">🇺🇸</span> English <small>US</small></span></button>
+            <button data-set-lang="na"><span><span class="flag">🌽</span> Nāhuatl <small>Tlaxcalteca · borrador</small></span></button>
+          </div>
+        </div>
         <a class="btn btn-primary btn-sm" href="https://wa.me/[WHATSAPP_E164]?text=Hola%20Nanovid%2C%20quiero%20pedir%20mi%20garraf%C3%B3n%20AlcaVid" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.520-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
-          WhatsApp
+          <span data-i18n="nav.cta_wa">WhatsApp</span>
         </a>
         <button class="menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
@@ -230,12 +296,14 @@
     </div>
     <div class="mobile-menu container" id="mobile-menu">
       <ul>
-        <li><a href="#productos">Productos</a></li>
-        <li><a href="#beneficios">Beneficios</a></li>
-        <li><a href="#rutas">Rutas</a></li>
-        <li><a href="#cobertura">Cobertura</a></li>
-        <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#productos" data-i18n="nav.products">Productos</a></li>
+        <li><a href="#beneficios" data-i18n="nav.benefits">Beneficios</a></li>
+        <li><a href="#proceso" data-i18n="nav.process">Cómo funciona</a></li>
+        <li><a href="#calculadora" data-i18n="nav.calc">Calculadora</a></li>
+        <li><a href="#testimonios" data-i18n="nav.testimonials">Testimonios</a></li>
+        <li><a href="#empresas" data-i18n="nav.b2b">Empresas</a></li>
+        <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+        <li><a href="#contacto" data-i18n="nav.contact">Contacto</a></li>
       </ul>
     </div>
   </div>
@@ -246,64 +314,43 @@
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="hero-eyebrow"><span class="dot"></span> Reparto a domicilio en Tlaxcala</span>
-      <h1>Agua alcalina <strong>pH 8.7</strong> a tu puerta en <em>Tlaxcala</em></h1>
-      <p class="hero-lead">AlcaVid by Nanovid — garrafón retornable de 20 litros, ionizado y con la mineralización exacta para elevar tu hidratación. Pide hoy y recibe en la próxima ruta de tu zona.</p>
+      <span class="hero-eyebrow"><span class="dot"></span> <span data-i18n="hero.eyebrow">Reparto a domicilio en Tlaxcala</span></span>
+      <h1>
+        <span data-i18n="hero.title_pre">Agua alcalina </span><strong data-i18n="hero.title_emph">pH 8.7</strong><span data-i18n="hero.title_mid"> a tu puerta en </span><em data-i18n="hero.title_loc">Tlaxcala</em>
+      </h1>
+      <p class="hero-lead" data-i18n="hero.lead">AlcaVid by Nanovid — garrafón retornable de 20 litros, ionizado y con la mineralización exacta para elevar tu hidratación.</p>
       <div class="hero-ctas">
-        <a class="btn btn-primary" href="https://wa.me/[WHATSAPP_E164]?text=Hola%20Nanovid%2C%20quiero%20pedir%20mi%20garraf%C3%B3n%20AlcaVid" target="_blank" rel="noopener">Pedir por WhatsApp</a>
-        <a class="btn btn-ghost" href="#productos">Ver productos</a>
+        <a class="btn btn-primary" href="https://wa.me/[WHATSAPP_E164]?text=Hola%20Nanovid%2C%20quiero%20pedir%20mi%20garraf%C3%B3n%20AlcaVid" target="_blank" rel="noopener" data-i18n="hero.cta_primary">Pedir por WhatsApp</a>
+        <a class="btn btn-ghost" href="#productos" data-i18n="hero.cta_secondary">Ver productos</a>
       </div>
       <div class="hero-trust">
-        <div class="item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
-          pH 8.7 verificado
-        </div>
-        <div class="item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
-          Reparto puntual
-        </div>
-        <div class="item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg>
-          Envase retornable
-        </div>
+        <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="hero.trust_ph">pH 8.7 verificado</span></div>
+        <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="hero.trust_delivery">Reparto puntual</span></div>
+        <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="20 6 9 17 4 12"/></svg><span data-i18n="hero.trust_returnable">Envase retornable</span></div>
       </div>
     </div>
     <div class="hero-visual" aria-hidden="true">
       <div class="ph-badge">
         <span class="num">8.7</span>
-        <span class="lbl">pH alcalino</span>
+        <span class="lbl" data-i18n="hero.ph_label">pH alcalino</span>
       </div>
       <div class="hero-bottle">
         <svg class="bottle-svg" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <linearGradient id="bot" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0" stop-color="#88D4F2"/>
-              <stop offset="1" stop-color="#0AAEE0"/>
-            </linearGradient>
-            <linearGradient id="cap" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0" stop-color="#1A6F95"/>
-              <stop offset="1" stop-color="#074E6E"/>
-            </linearGradient>
+            <linearGradient id="bot" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#88D4F2"/><stop offset="1" stop-color="#0AAEE0"/></linearGradient>
+            <linearGradient id="cap" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#1A6F95"/><stop offset="1" stop-color="#074E6E"/></linearGradient>
           </defs>
-          <!-- Tapa -->
           <rect x="78" y="10" width="44" height="32" rx="4" fill="url(#cap)"/>
           <rect x="78" y="34" width="44" height="6" fill="#053A55"/>
-          <!-- Cuello -->
           <rect x="86" y="40" width="28" height="14" fill="#7AB7D2"/>
-          <!-- Cuerpo del garrafón -->
           <path d="M40 70 Q40 54 60 54 H140 Q160 54 160 70 V250 Q160 270 140 270 H60 Q40 270 40 250 Z" fill="url(#bot)" opacity="0.92"/>
-          <!-- Asa -->
           <path d="M155 90 Q175 90 175 110 Q175 130 155 130" fill="none" stroke="#0890BC" stroke-width="6" opacity="0.7"/>
-          <!-- Etiqueta -->
           <rect x="55" y="120" width="90" height="100" rx="6" fill="#FFFFFF" opacity="0.96"/>
           <text x="100" y="158" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="22" fill="#0AAEE0">ALCAVID</text>
           <line x1="68" y1="168" x2="132" y2="168" stroke="#8DC63F" stroke-width="2"/>
           <text x="100" y="188" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="600" font-size="11" fill="#0B3D5C">AGUA ALCALINA</text>
           <text x="100" y="206" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="14" fill="#0B3D5C">pH 8.7</text>
-          <!-- Burbujas -->
-          <circle cx="70" cy="240" r="3" fill="#FFFFFF" opacity="0.6"/>
-          <circle cx="125" cy="248" r="2" fill="#FFFFFF" opacity="0.5"/>
-          <circle cx="100" cy="252" r="4" fill="#FFFFFF" opacity="0.55"/>
+          <circle cx="70" cy="240" r="3" fill="#FFFFFF" opacity="0.6"/><circle cx="125" cy="248" r="2" fill="#FFFFFF" opacity="0.5"/><circle cx="100" cy="252" r="4" fill="#FFFFFF" opacity="0.55"/>
         </svg>
       </div>
     </div>
@@ -314,16 +361,15 @@
 <section class="products" id="productos" aria-labelledby="prod-h">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Nuestros productos</div>
-      <h2 id="prod-h">Agua alcalina y productos solidarios de Tlaxcala</h2>
-      <p>Hidratación de calidad y apoyo a productores locales — todo en un mismo reparto.</p>
+      <div class="eyebrow" data-i18n="products.eyebrow">Nuestros productos</div>
+      <h2 id="prod-h" data-i18n="products.title">Agua alcalina y productos solidarios de Tlaxcala</h2>
+      <p data-i18n="products.lead">Hidratación de calidad y apoyo a productores locales — todo en un mismo reparto.</p>
     </div>
     <div class="product-grid">
       <article class="product-card">
         <div class="product-visual">
           <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <rect x="78" y="10" width="44" height="32" rx="4" fill="#074E6E"/>
-            <rect x="86" y="40" width="28" height="14" fill="#7AB7D2"/>
+            <rect x="78" y="10" width="44" height="32" rx="4" fill="#074E6E"/><rect x="86" y="40" width="28" height="14" fill="#7AB7D2"/>
             <path d="M40 70 Q40 54 60 54 H140 Q160 54 160 70 V250 Q160 270 140 270 H60 Q40 270 40 250 Z" fill="#0AAEE0" opacity="0.9"/>
             <rect x="55" y="120" width="90" height="100" rx="6" fill="#FFFFFF"/>
             <text x="100" y="158" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="22" fill="#0AAEE0">ALCAVID</text>
@@ -331,85 +377,223 @@
             <text x="100" y="188" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="700" font-size="14" fill="#0B3D5C">pH 8.7</text>
           </svg>
         </div>
-        <span class="tag alt">Producto estrella</span>
-        <h3>AlcaVid — Agua Alcalina pH 8.7</h3>
-        <div class="sub">Garrafón retornable de 20 litros</div>
-        <p>Agua sometida a un proceso de purificación e ionización que eleva el pH a 8.7. Sabor suave, mineralización balanceada y la frescura ideal para hidratarte mejor en el día a día.</p>
+        <span class="tag alt" data-i18n="products.alcavid.tag">Producto estrella</span>
+        <h3 data-i18n="products.alcavid.title">AlcaVid — Agua Alcalina pH 8.7</h3>
+        <div class="sub" data-i18n="products.alcavid.sub">Garrafón retornable de 20 litros</div>
+        <p data-i18n="products.alcavid.desc">Agua sometida a un proceso de purificación e ionización que eleva el pH a 8.7.</p>
         <ul class="features">
-          <li>pH 8.7 verificado en cada lote</li>
-          <li>Garrafón retornable de 20 L</li>
-          <li>Reparto puntual a domicilio</li>
-          <li>Sabor neutro, ideal para toda la familia</li>
+          <li data-i18n="products.alcavid.f1">pH 8.7 verificado en cada lote</li>
+          <li data-i18n="products.alcavid.f2">Garrafón retornable de 20 L</li>
+          <li data-i18n="products.alcavid.f3">Reparto puntual a domicilio</li>
+          <li data-i18n="products.alcavid.f4">Sabor neutro, ideal para toda la familia</li>
         </ul>
-        <a class="btn btn-primary" href="https://wa.me/[WHATSAPP_E164]?text=Quiero%20pedir%20un%20garraf%C3%B3n%20AlcaVid%20pH%208.7" target="_blank" rel="noopener">Pedir AlcaVid</a>
+        <a class="btn btn-primary" href="https://wa.me/[WHATSAPP_E164]?text=Quiero%20pedir%20un%20garraf%C3%B3n%20AlcaVid" target="_blank" rel="noopener" data-i18n="products.alcavid.cta">Pedir AlcaVid</a>
       </article>
 
       <article class="product-card">
         <div class="product-visual cacao">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <ellipse cx="100" cy="100" rx="60" ry="50" fill="#6B3410"/>
-            <ellipse cx="80" cy="90" rx="14" ry="11" fill="#8B4513" opacity="0.6"/>
-            <ellipse cx="120" cy="105" rx="14" ry="11" fill="#5C2A0A" opacity="0.7"/>
-            <ellipse cx="100" cy="80" rx="14" ry="11" fill="#7D3F12" opacity="0.7"/>
-            <ellipse cx="105" cy="115" rx="14" ry="11" fill="#8B4513" opacity="0.6"/>
-            <ellipse cx="80" cy="115" rx="14" ry="11" fill="#5C2A0A" opacity="0.7"/>
+            <ellipse cx="80" cy="90" rx="14" ry="11" fill="#8B4513" opacity="0.6"/><ellipse cx="120" cy="105" rx="14" ry="11" fill="#5C2A0A" opacity="0.7"/><ellipse cx="100" cy="80" rx="14" ry="11" fill="#7D3F12" opacity="0.7"/><ellipse cx="105" cy="115" rx="14" ry="11" fill="#8B4513" opacity="0.6"/><ellipse cx="80" cy="115" rx="14" ry="11" fill="#5C2A0A" opacity="0.7"/>
           </svg>
         </div>
-        <span class="tag">Producto solidario</span>
-        <h3>Tlaxquita — Cacao en grano</h3>
-        <div class="sub">Semilla de cacao artesanal · 100% Tlaxcala</div>
-        <p>Cacao en grano de productores locales tlaxcaltecas. Producto solidario de la semana — apoyas el campo de Tlaxcala con cada compra. Mejora tu salud con las propiedades naturales del cacao.</p>
+        <span class="tag" data-i18n="products.tlaxquita.tag">Producto solidario</span>
+        <h3 data-i18n="products.tlaxquita.title">Tlaxquita — Cacao en grano</h3>
+        <div class="sub" data-i18n="products.tlaxquita.sub">Semilla de cacao artesanal · 100% Tlaxcala</div>
+        <p data-i18n="products.tlaxquita.desc">Cacao en grano de productores locales tlaxcaltecas.</p>
         <ul class="features">
-          <li>Cacao 100% natural en grano</li>
-          <li>De productores tlaxcaltecas</li>
-          <li>Disponible en la ruta de reparto</li>
-          <li>Cantidad limitada por semana</li>
+          <li data-i18n="products.tlaxquita.f1">Cacao 100% natural en grano</li>
+          <li data-i18n="products.tlaxquita.f2">De productores tlaxcaltecas</li>
+          <li data-i18n="products.tlaxquita.f3">Disponible en la ruta de reparto</li>
+          <li data-i18n="products.tlaxquita.f4">Cantidad limitada por semana</li>
         </ul>
         <div class="price">$30 <small>MXN</small></div>
-        <a class="btn btn-secondary" href="https://wa.me/[WHATSAPP_E164]?text=Quiero%20pedir%20cacao%20Tlaxquita" target="_blank" rel="noopener">Pedir Tlaxquita</a>
+        <a class="btn btn-secondary" href="https://wa.me/[WHATSAPP_E164]?text=Quiero%20pedir%20cacao%20Tlaxquita" target="_blank" rel="noopener" data-i18n="products.tlaxquita.cta">Pedir Tlaxquita</a>
       </article>
     </div>
   </div>
 </section>
 
-<!-- =================== BENEFICIOS · ¿Por qué agua alcalina? =================== -->
+<!-- =================== BENEFICIOS =================== -->
 <section id="beneficios" aria-labelledby="ben-h">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">¿Por qué agua alcalina pH 8.7?</div>
-      <h2 id="ben-h">Hidratación con propósito, no solo para apagar la sed</h2>
-      <p>El agua que tomas todos los días marca la diferencia. Esto es lo que distingue al pH 8.7 de AlcaVid frente al agua convencional.</p>
+      <div class="eyebrow" data-i18n="benefits.eyebrow">¿Por qué agua alcalina pH 8.7?</div>
+      <h2 id="ben-h" data-i18n="benefits.title">Hidratación con propósito</h2>
+      <p data-i18n="benefits.lead">El agua que tomas todos los días marca la diferencia.</p>
     </div>
     <div class="benefits-grid">
-      <div class="benefit">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v6"/><path d="M5 12c0 5 3 9 7 9s7-4 7-9c0-3-2-5-7-10-5 5-7 7-7 10z"/></svg></div>
-        <h3>Mejor hidratación celular</h3>
-        <p>El pH alcalino y la mineralización balanceada favorecen la absorción del agua a nivel celular, comparado con aguas neutras o ácidas.</p>
+      <div class="benefit"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v6"/><path d="M5 12c0 5 3 9 7 9s7-4 7-9c0-3-2-5-7-10-5 5-7 7-7 10z"/></svg></div><h3 data-i18n="benefits.b1t">Mejor hidratación celular</h3><p data-i18n="benefits.b1d">El pH alcalino y la mineralización balanceada favorecen la absorción.</p></div>
+      <div class="benefit"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div><h3 data-i18n="benefits.b2t">Equilibrio del pH corporal</h3><p data-i18n="benefits.b2d">El cuerpo trabaja para mantener un pH ligeramente alcalino.</p></div>
+      <div class="benefit"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/></svg></div><h3 data-i18n="benefits.b3t">Minerales esenciales</h3><p data-i18n="benefits.b3d">AlcaVid conserva calcio y magnesio.</p></div>
+      <div class="benefit"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c2 0 4 .8 5.5 2"/><polyline points="21 4 21 9 16 9"/></svg></div><h3 data-i18n="benefits.b4t">Sabor más suave</h3><p data-i18n="benefits.b4d">Sin cloro ni sabores residuales.</p></div>
+      <div class="benefit"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3 data-i18n="benefits.b5t">Energía sostenida</h3><p data-i18n="benefits.b5d">Una hidratación de calidad ayuda al rendimiento.</p></div>
+      <div class="benefit"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg></div><h3 data-i18n="benefits.b6t">Calidad consistente</h3><p data-i18n="benefits.b6d">Cada lote pasa por control de pH.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== PROCESO =================== -->
+<section class="process" id="proceso" aria-labelledby="proc-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="process.eyebrow">Cómo funciona</div>
+      <h2 id="proc-h" data-i18n="process.title">Pedir tu garrafón en 4 pasos</h2>
+      <p data-i18n="process.lead">Sin apps, sin complicaciones.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="step-num">01</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div><h3 data-i18n="process.s1t">Escríbenos</h3><p data-i18n="process.s1d">WhatsApp, formulario o Instagram.</p></div>
+      <div class="step"><div class="step-num">02</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><h3 data-i18n="process.s2t">Confirmamos tu día</h3><p data-i18n="process.s2d">Te avisamos en qué ruta entras.</p></div>
+      <div class="step"><div class="step-num">03</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h3 data-i18n="process.s3t">Llevamos a tu puerta</h3><p data-i18n="process.s3d">Subimos el garrafón, recogemos el envase.</p></div>
+      <div class="step"><div class="step-num">04</div><div class="step-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div><h3 data-i18n="process.s4t">Repite cuando quieras</h3><p data-i18n="process.s4d">Suscríbete y olvídate.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== COMPARATIVA =================== -->
+<section id="comparativa" aria-labelledby="comp-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="compare.eyebrow">Comparativa</div>
+      <h2 id="comp-h" data-i18n="compare.title">AlcaVid vs agua común</h2>
+      <p data-i18n="compare.lead">No todas las aguas son iguales.</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th data-i18n="compare.col_feature">Característica</th>
+            <th class="brand-col" data-i18n="compare.col_alcavid">AlcaVid pH 8.7</th>
+            <th data-i18n="compare.col_common">Garrafón común</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td data-i18n="compare.r1">pH alcalino</td><td class="yes" data-i18n="compare.r1a">8.7</td><td class="no" data-i18n="compare.r1b">≈ 6.5–7.0</td></tr>
+          <tr><td data-i18n="compare.r2">Calcio y magnesio</td><td class="yes" data-i18n="compare.r2a">Sí</td><td class="no" data-i18n="compare.r2b">Eliminados</td></tr>
+          <tr><td data-i18n="compare.r3">Sabor sin cloro</td><td class="yes" data-i18n="compare.r3a">Sí</td><td class="no" data-i18n="compare.r3b">Variable</td></tr>
+          <tr><td data-i18n="compare.r4">Reparto puntual</td><td class="yes" data-i18n="compare.r4a">Sí</td><td class="no" data-i18n="compare.r4b">Limitado</td></tr>
+          <tr><td data-i18n="compare.r5">Apoyo a productores</td><td class="yes" data-i18n="compare.r5a">Sí</td><td class="no" data-i18n="compare.r5b">No</td></tr>
+          <tr><td data-i18n="compare.r6">Atención humana</td><td class="yes" data-i18n="compare.r6a">WhatsApp</td><td class="no" data-i18n="compare.r6b">Call center</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- =================== CALCULADORA =================== -->
+<section class="calc-section" id="calculadora" aria-labelledby="calc-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="calc.eyebrow">Calculadora</div>
+      <h2 id="calc-h" data-i18n="calc.title">¿Cuánta agua necesitas?</h2>
+      <p data-i18n="calc.lead">Calcula tu meta diaria y cuántos garrafones AlcaVid representa al mes.</p>
+    </div>
+    <div class="calc">
+      <div class="calc-fields">
+        <div class="field">
+          <label for="calc-weight" data-i18n="calc.weight">Tu peso (kg)</label>
+          <input id="calc-weight" type="number" min="20" max="250" step="1" value="70">
+        </div>
+        <div class="field">
+          <label for="calc-activity" data-i18n="calc.activity">Tu actividad</label>
+          <select id="calc-activity">
+            <option value="low" data-i18n="calc.act_low">Sedentaria</option>
+            <option value="med" selected data-i18n="calc.act_med">Moderada</option>
+            <option value="high" data-i18n="calc.act_high">Alta</option>
+          </select>
+        </div>
       </div>
-      <div class="benefit">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg></div>
-        <h3>Equilibrio del pH corporal</h3>
-        <p>El cuerpo trabaja constantemente para mantener un pH ligeramente alcalino. Tomar agua con pH 8.7 puede apoyar ese equilibrio natural.</p>
+      <div class="calc-result">
+        <div>
+          <div class="big"><span id="calc-liters">2.7</span> L</div>
+          <div class="label" data-i18n="calc.result_liters">litros / día</div>
+        </div>
+        <div>
+          <div class="big"><span id="calc-garrafones">5</span></div>
+          <div class="label" data-i18n="calc.result_garrafones">garrafones / mes</div>
+          <div class="sub" data-i18n="calc.result_sub">Aprox. para 1 persona</div>
+        </div>
       </div>
-      <div class="benefit">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 12h18"/><path d="M12 3v18"/><circle cx="12" cy="12" r="9"/></svg></div>
-        <h3>Minerales esenciales</h3>
-        <p>AlcaVid conserva calcio y magnesio, minerales clave para huesos, músculos y energía diaria que muchas aguas filtradas industriales eliminan.</p>
+      <div class="calc-cta">
+        <a class="btn btn-primary" href="#contacto" data-i18n="calc.cta">Pedir mi suscripción</a>
       </div>
-      <div class="benefit">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c2 0 4 .8 5.5 2"/><polyline points="21 4 21 9 16 9"/></svg></div>
-        <h3>Sabor más suave</h3>
-        <p>El proceso elimina el cloro y otros sabores residuales. El agua se siente más ligera y fácil de tomar — incluso a temperatura ambiente.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== TESTIMONIOS =================== -->
+<section class="testimonials" id="testimonios" aria-labelledby="test-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="testimonials.eyebrow">Testimonios</div>
+      <h2 id="test-h" data-i18n="testimonials.title">Familias y empresas tlaxcaltecas confían en AlcaVid</h2>
+    </div>
+    <div class="rating-summary">
+      <span class="num">5.0</span>
+      <span class="stars">★★★★★</span>
+      <span class="label" data-i18n="testimonials.rating_label">5.0 · clientes locales</span>
+    </div>
+    <div class="testi-grid">
+      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i18n="testimonials.t1">«Llevo 6 meses con AlcaVid en casa…»</blockquote><div class="who"><div class="avatar">M</div><div><strong data-i18n="testimonials.t1n">María L.</strong><span data-i18n="testimonials.t1z">Tizatlán</span></div></div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i18n="testimonials.t2">«Reparto puntual cada miércoles…»</blockquote><div class="who"><div class="avatar">C</div><div><strong data-i18n="testimonials.t2n">Carlos R.</strong><span data-i18n="testimonials.t2z">Totolac</span></div></div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i18n="testimonials.t3">«Pedimos para la oficina…»</blockquote><div class="who"><div class="avatar">A</div><div><strong data-i18n="testimonials.t3n">Ana P.</strong><span data-i18n="testimonials.t3z">Tlaxcala capital</span></div></div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i18n="testimonials.t4">«El cacao Tlaxquita es un detalle precioso…»</blockquote><div class="who"><div class="avatar">S</div><div><strong data-i18n="testimonials.t4n">Sofía M.</strong><span data-i18n="testimonials.t4z">Contla</span></div></div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i18n="testimonials.t5">«Tomo agua alcalina por recomendación médica…»</blockquote><div class="who"><div class="avatar">J</div><div><strong data-i18n="testimonials.t5n">Jorge H.</strong><span data-i18n="testimonials.t5z">Panotla</span></div></div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div><blockquote data-i18n="testimonials.t6">«Llevamos 3 meses con la suscripción…»</blockquote><div class="who"><div class="avatar">V</div><div><strong data-i18n="testimonials.t6n">Familia Vázquez</strong><span data-i18n="testimonials.t6z">Chiautempan</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- =================== B2B / EMPRESAS =================== -->
+<section class="b2b" id="empresas" aria-labelledby="b2b-h">
+  <div class="container">
+    <div class="b2b-grid">
+      <div>
+        <div class="eyebrow" style="color:var(--blue);font-weight:700;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;" data-i18n="b2b.eyebrow">Empresas y eventos</div>
+        <h2 data-i18n="b2b.title">Hidrata a tu equipo, restaurante o evento con <strong>AlcaVid</strong></h2>
+        <p data-i18n="b2b.lead">Soluciones B2B para oficinas, restaurantes, gimnasios, hoteles y eventos en todo Tlaxcala.</p>
       </div>
-      <div class="benefit">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-        <h3>Energía sostenida</h3>
-        <p>Una hidratación de calidad ayuda al rendimiento físico y mental durante toda la jornada — clave si haces deporte o trabajas largas horas.</p>
+      <div class="b2b-card">
+        <div class="icon-row">
+          <span class="badge" data-i18n="b2b.tag1">Oficinas</span>
+          <span class="badge" data-i18n="b2b.tag2">Restaurantes</span>
+          <span class="badge" data-i18n="b2b.tag3">Gimnasios</span>
+          <span class="badge" data-i18n="b2b.tag4">Eventos</span>
+          <span class="badge" data-i18n="b2b.tag5">Hoteles</span>
+        </div>
+        <ul>
+          <li data-i18n="b2b.benefit1">Volumen mensual con descuento</li>
+          <li data-i18n="b2b.benefit2">Factura fiscal CFDI 4.0</li>
+          <li data-i18n="b2b.benefit3">Reparto programado</li>
+          <li data-i18n="b2b.benefit4">Equipo dedicado</li>
+          <li data-i18n="b2b.benefit5">Cacao Tlaxquita para detalles</li>
+        </ul>
+        <a class="btn btn-primary" href="https://wa.me/[WHATSAPP_E164]?text=Hola%20Nanovid%2C%20quiero%20cotizaci%C3%B3n%20para%20empresa" target="_blank" rel="noopener" data-i18n="b2b.cta">Cotización para empresas</a>
       </div>
-      <div class="benefit">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-6"/></svg></div>
-        <h3>Calidad consistente</h3>
-        <p>Cada lote pasa por control de pH y purificación. No improvisamos: lo que llega a tu casa es exactamente lo que dice la etiqueta.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== SUSCRIPCIÓN =================== -->
+<section id="suscripcion">
+  <div class="container">
+    <div class="subscription">
+      <div>
+        <div class="eyebrow" style="color:rgba(255,255,255,.8);font-weight:700;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:8px;" data-i18n="subscription.eyebrow">Suscripción mensual</div>
+        <h2 data-i18n="subscription.title">Olvídate de pedir cada semana</h2>
+        <p data-i18n="subscription.lead">Activa tu suscripción y recibe tus garrafones automáticamente.</p>
+        <p style="font-size:.88rem;opacity:.8;margin-top:14px;" data-i18n="subscription.price_note">El precio depende de tu zona — pide tu cotización exacta.</p>
+      </div>
+      <div class="plan">
+        <div data-i18n="subscription.plan_name" style="font-size:.95rem;opacity:.8;font-weight:600;">Plan Hogar</div>
+        <ul>
+          <li data-i18n="subscription.b1">4 garrafones AlcaVid 20L al mes</li>
+          <li data-i18n="subscription.b2">Reparto automático</li>
+          <li data-i18n="subscription.b3">Aviso por WhatsApp</li>
+          <li data-i18n="subscription.b4">Pausa o cancela cuando quieras</li>
+          <li data-i18n="subscription.b5">Cacao Tlaxquita gratis 1 vez al mes</li>
+        </ul>
+        <a class="btn btn-primary" style="background:var(--green);width:100%;" href="https://wa.me/[WHATSAPP_E164]?text=Quiero%20activar%20mi%20suscripci%C3%B3n%20mensual%20Nanovid" target="_blank" rel="noopener" data-i18n="subscription.cta">Activar suscripción</a>
       </div>
     </div>
   </div>
@@ -419,38 +603,26 @@
 <section class="routes" id="rutas" aria-labelledby="rut-h">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Rutas semanales</div>
-      <h2 id="rut-h">Repartimos en tu zona — sin costo extra</h2>
-      <p>Cada día visitamos comunidades distintas de la zona centro de Tlaxcala. Encuentra tu día y aparta tu garrafón con tiempo.</p>
+      <div class="eyebrow" data-i18n="routes.eyebrow">Rutas semanales</div>
+      <h2 id="rut-h" data-i18n="routes.title">Repartimos en tu zona — sin costo extra</h2>
+      <p data-i18n="routes.lead">Cada día visitamos comunidades distintas de la zona centro de Tlaxcala.</p>
     </div>
     <div class="routes-grid">
       <div class="route">
-        <span class="day">Miércoles</span>
-        <ul>
-          <li>Tizatlán</li>
-          <li>Panotla (Zona Militar)</li>
-          <li>Teotlalpan</li>
-          <li>Chimalpa</li>
-          <li>Tepeticpac</li>
-          <li>San Marcos</li>
-          <li>Totolac</li>
-        </ul>
+        <span class="day" data-i18n="routes.wednesday">Miércoles</span>
+        <ul><li>Tizatlán</li><li>Panotla (Zona Militar)</li><li>Teotlalpan</li><li>Chimalpa</li><li>Tepeticpac</li><li>San Marcos</li><li>Totolac</li></ul>
       </div>
       <div class="route">
-        <span class="day">Otros días</span>
-        <ul>
-          <li>Ixtulco</li>
-          <li>Contla</li>
-          <li>Y más comunidades</li>
-        </ul>
+        <span class="day" data-i18n="routes.other_days">Otros días</span>
+        <ul><li>Ixtulco</li><li>Contla</li><li data-i18n="routes.and_more">Y más comunidades</li></ul>
       </div>
       <div class="route" style="background:linear-gradient(135deg,#0AAEE0 0%,#8DC63F 100%);color:#fff;border:0;">
-        <span class="day" style="background:#fff;color:#0AAEE0;">¿No ves tu zona?</span>
-        <p style="margin:0 0 16px;font-size:.95rem;">Cubrimos toda la zona centro de Tlaxcala. Mándanos tu colonia por WhatsApp y te confirmamos día y horario en menos de 1 minuto.</p>
-        <a class="btn btn-ghost" style="background:#fff;color:#0AAEE0;border:0;" href="https://wa.me/[WHATSAPP_E164]?text=Hola%2C%20%C2%BFreparten%20en%20mi%20zona%3F" target="_blank" rel="noopener">Consultar mi zona</a>
+        <span class="day" style="background:#fff;color:#0AAEE0;" data-i18n="routes.no_zone_title">¿No ves tu zona?</span>
+        <p style="margin:0 0 16px;font-size:.95rem;color:#fff;" data-i18n="routes.no_zone_desc">Cubrimos toda la zona centro de Tlaxcala.</p>
+        <a class="btn btn-ghost" style="background:#fff;color:#0AAEE0;border:0;" href="https://wa.me/[WHATSAPP_E164]?text=Hola%2C%20%C2%BFreparten%20en%20mi%20zona%3F" target="_blank" rel="noopener" data-i18n="routes.no_zone_cta">Consultar mi zona</a>
       </div>
     </div>
-    <p class="routes-note"><strong>Tip:</strong> haz tu pedido un día antes de tu ruta para garantizar entrega.</p>
+    <p class="routes-note" data-i18n="routes.tip" data-i18n-html><strong>Tip:</strong> haz tu pedido un día antes de tu ruta.</p>
   </div>
 </section>
 
@@ -458,31 +630,57 @@
 <section id="cobertura" aria-labelledby="cob-h">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Zona de cobertura</div>
-      <h2 id="cob-h">Reparto a domicilio en el centro de Tlaxcala</h2>
-      <p>Llegamos a estas comunidades del Valle de Tlaxcala. Si tu colonia no aparece, escríbenos — seguimos creciendo.</p>
+      <div class="eyebrow" data-i18n="coverage.eyebrow">Zona de cobertura</div>
+      <h2 id="cob-h" data-i18n="coverage.title">Reparto a domicilio en el centro de Tlaxcala</h2>
+      <p data-i18n="coverage.lead">Llegamos a estas comunidades del Valle de Tlaxcala.</p>
     </div>
     <div class="coverage-list">
-      <span>Tlaxcala capital</span>
-      <span>Tizatlán</span>
-      <span>Teotlalpan</span>
-      <span>La Candelaria Teotlalpan</span>
-      <span>Panotla</span>
-      <span>Panotla Zona Militar</span>
-      <span>San Hipólito Chimalpa</span>
-      <span>Tepeticpac</span>
-      <span>San Marcos Contla</span>
-      <span>Totolac</span>
-      <span>Ixtulco</span>
-      <span>Contla de Juan Cuamatzi</span>
-      <span>Apetatitlán</span>
-      <span>Chiautempan</span>
-      <span>Santa Ana Chiautempan</span>
-      <span>Acuitlapilco</span>
-      <span>San Luis Apizaquito</span>
-      <span>La Magdalena Tlaltelulco</span>
-      <span>Ocotlán</span>
-      <span>San Esteban Tizatlán</span>
+      <span>Tlaxcala capital</span><span>Tizatlán</span><span>Teotlalpan</span><span>La Candelaria Teotlalpan</span><span>Panotla</span><span>Panotla Zona Militar</span><span>San Hipólito Chimalpa</span><span>Tepeticpac</span><span>San Marcos Contla</span><span>Totolac</span><span>Ixtulco</span><span>Contla de Juan Cuamatzi</span><span>Apetatitlán</span><span>Chiautempan</span><span>Santa Ana Chiautempan</span><span>Acuitlapilco</span><span>San Luis Apizaquito</span><span>La Magdalena Tlaltelulco</span><span>Ocotlán</span><span>San Esteban Tizatlán</span>
+    </div>
+    <!-- Banner cultural Náhuatl -->
+    <div class="cultura">
+      <div class="nahuatl" data-i18n="cultura.title">Atl yectli mochan</div>
+      <p data-i18n="cultura.desc">«Agua buena para tu hogar» — Nanovid honra las raíces tlaxcaltecas en cada garrafón.</p>
+    </div>
+  </div>
+</section>
+
+<!-- =================== BLOG / CONSEJOS =================== -->
+<section class="blog" id="blog" aria-labelledby="blog-h">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow" data-i18n="blog.eyebrow">Consejos</div>
+      <h2 id="blog-h" data-i18n="blog.title">Aprende más sobre el agua que tomas</h2>
+      <p data-i18n="blog.lead">Artículos cortos sobre hidratación, agua alcalina y bienestar para Tlaxcala.</p>
+    </div>
+    <div class="blog-grid">
+      <article class="post-card">
+        <div class="cover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6"/><path d="M5 12c0 5 3 9 7 9s7-4 7-9c0-3-2-5-7-10-5 5-7 7-7 10z"/></svg></div>
+        <div class="body">
+          <span class="cat" data-i18n="blog.p1cat">Hidratación</span>
+          <h3 data-i18n="blog.p1t">¿Cuánta agua debo tomar?</h3>
+          <p data-i18n="blog.p1d">Más allá de los 8 vasos.</p>
+          <a class="read-more" href="#calculadora" data-i18n="blog.read_more">Leer más →</a>
+        </div>
+      </article>
+      <article class="post-card">
+        <div class="cover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/></svg></div>
+        <div class="body">
+          <span class="cat" data-i18n="blog.p2cat">Agua alcalina</span>
+          <h3 data-i18n="blog.p2t">Mitos y verdades del pH 8.7</h3>
+          <p data-i18n="blog.p2d">Lo que dice la ciencia.</p>
+          <a class="read-more" href="#beneficios" data-i18n="blog.read_more">Leer más →</a>
+        </div>
+      </article>
+      <article class="post-card">
+        <div class="cover"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+        <div class="body">
+          <span class="cat" data-i18n="blog.p3cat">Tlaxcala</span>
+          <h3 data-i18n="blog.p3t">Productores locales: Tlaxquita</h3>
+          <p data-i18n="blog.p3d">A quién apoyas con cada compra.</p>
+          <a class="read-more" href="#productos" data-i18n="blog.read_more">Leer más →</a>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -491,30 +689,14 @@
 <section class="diff" aria-labelledby="dif-h">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">¿Por qué Nanovid?</div>
-      <h2 id="dif-h">No vendemos agua. Vendemos confianza en lo que tomas.</h2>
+      <div class="eyebrow" data-i18n="diff.eyebrow">¿Por qué Nanovid?</div>
+      <h2 id="dif-h" data-i18n="diff.title">No vendemos agua. Vendemos confianza.</h2>
     </div>
     <div class="diff-grid">
-      <div class="diff-card">
-        <div class="num">1</div>
-        <h3>pH 8.7 verificado</h3>
-        <p>Cada lote se mide antes de salir de planta. Nada de promesas vagas.</p>
-      </div>
-      <div class="diff-card">
-        <div class="num">2</div>
-        <h3>Reparto a tu puerta</h3>
-        <p>Rutas fijas semanales en toda la zona centro. No cargas garrafones, nosotros los subimos.</p>
-      </div>
-      <div class="diff-card">
-        <div class="num">3</div>
-        <h3>Producto solidario semanal</h3>
-        <p>Cada semana sumamos un producto de productores tlaxcaltecas, como el cacao Tlaxquita.</p>
-      </div>
-      <div class="diff-card">
-        <div class="num">4</div>
-        <h3>Atención directa</h3>
-        <p>Hablas con personas de Tlaxcala. WhatsApp en minutos, no call centers.</p>
-      </div>
+      <div class="diff-card"><div class="num">1</div><h3 data-i18n="diff.d1t">pH 8.7 verificado</h3><p data-i18n="diff.d1d">Cada lote se mide.</p></div>
+      <div class="diff-card"><div class="num">2</div><h3 data-i18n="diff.d2t">Reparto a tu puerta</h3><p data-i18n="diff.d2d">Rutas fijas semanales.</p></div>
+      <div class="diff-card"><div class="num">3</div><h3 data-i18n="diff.d3t">Producto solidario</h3><p data-i18n="diff.d3d">Cada semana sumamos un producto local.</p></div>
+      <div class="diff-card"><div class="num">4</div><h3 data-i18n="diff.d4t">Atención directa</h3><p data-i18n="diff.d4d">Hablas con personas, no call centers.</p></div>
     </div>
   </div>
 </section>
@@ -523,46 +705,19 @@
 <section id="faq" aria-labelledby="faq-h">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Preguntas frecuentes</div>
-      <h2 id="faq-h">Lo que más nos preguntan</h2>
+      <div class="eyebrow" data-i18n="faq.eyebrow">Preguntas frecuentes</div>
+      <h2 id="faq-h" data-i18n="faq.title">Lo que más nos preguntan</h2>
     </div>
     <div class="faq-list">
-      <details class="faq-item" open>
-        <summary class="faq-q">¿Qué es el agua alcalina pH 8.7 de AlcaVid?</summary>
-        <div class="faq-a"><p>Es agua sometida a un proceso de purificación e ionización que eleva su pH a 8.7, por encima del rango neutro (7.0). Esto la diferencia del agua de garrafón convencional y la convierte en una alternativa para personas que buscan equilibrar el pH de su organismo.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">¿En qué zonas de Tlaxcala hacen reparto?</summary>
-        <div class="faq-a"><p>Repartimos en Tizatlán, Panotla (Zona Militar), Teotlalpan, San Hipólito Chimalpa, Tepeticpac, San Marcos, Totolac, Ixtulco, Contla y comunidades cercanas a la capital de Tlaxcala. Cada zona tiene un día de ruta asignado.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">¿Qué días pasan por mi zona?</summary>
-        <div class="faq-a"><p>Tenemos rutas diarias de lunes a sábado. Por ejemplo, los miércoles cubrimos Tizatlán, Panotla (Zona Militar), Teotlalpan, Chimalpa, Tepeticpac, San Marcos y Totolac. Escríbenos por WhatsApp y te confirmamos tu día exacto en minutos.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">¿Cuánto cuesta el garrafón de 20 litros?</summary>
-        <div class="faq-a"><p>El precio depende de si es primera compra (incluye envase) o recarga, y de tu zona de reparto. Pide tu cotización exacta por WhatsApp en menos de 1 minuto.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">¿La botella de AlcaVid es retornable?</summary>
-        <div class="faq-a"><p>Sí. El garrafón de 20 litros es retornable: lo recogemos vacío y dejamos uno lleno en cada visita, lo que reduce residuos plásticos y baja tu costo por recarga.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">¿Qué beneficios reales tiene tomar agua alcalina?</summary>
-        <div class="faq-a"><p>Mejor hidratación, mineralización con calcio y magnesio, sabor más suave, y para muchas personas mejor digestión y sensación de bienestar comparado con agua convencional. Cada organismo es distinto; consulta a tu médico ante condiciones específicas.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">¿Cómo hago mi pedido?</summary>
-        <div class="faq-a"><p>Por WhatsApp directo (botón verde flotante en este sitio), llenando el formulario al final de la página, o enviándonos un mensaje a Instagram <a href="https://www.instagram.com/nanovid.tlx/" target="_blank" rel="noopener">@nanovid.tlx</a>. Confirmamos disponibilidad y día de entrega de inmediato.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">¿Tienen otros productos además del agua?</summary>
-        <div class="faq-a"><p>Sí. Cada semana lanzamos un Producto Solidario, como el cacao en grano Tlaxquita ($30), apoyando a productores locales de Tlaxcala.</p></div>
-      </details>
-      <details class="faq-item">
-        <summary class="faq-q">¿Dónde está su planta?</summary>
-        <div class="faq-a"><p>Estamos en Calle Teotlalpan #21, La Candelaria Teotlalpan, Tlaxcala, México. Si quieres pasar a recoger tu pedido en lugar de reparto, escríbenos antes para coordinar.</p></div>
-      </details>
+      <details class="faq-item" open><summary class="faq-q" data-i18n="faq.q1">¿Qué es el agua alcalina pH 8.7?</summary><div class="faq-a"><p data-i18n="faq.a1">Es agua purificada e ionizada…</p></div></details>
+      <details class="faq-item"><summary class="faq-q" data-i18n="faq.q2">¿En qué zonas reparten?</summary><div class="faq-a"><p data-i18n="faq.a2">Tizatlán, Panotla…</p></div></details>
+      <details class="faq-item"><summary class="faq-q" data-i18n="faq.q3">¿Qué días pasan por mi zona?</summary><div class="faq-a"><p data-i18n="faq.a3">Lunes a sábado…</p></div></details>
+      <details class="faq-item"><summary class="faq-q" data-i18n="faq.q4">¿Cuánto cuesta el garrafón?</summary><div class="faq-a"><p data-i18n="faq.a4">Pide tu cotización por WhatsApp.</p></div></details>
+      <details class="faq-item"><summary class="faq-q" data-i18n="faq.q5">¿Es retornable?</summary><div class="faq-a"><p data-i18n="faq.a5">Sí, el garrafón es retornable.</p></div></details>
+      <details class="faq-item"><summary class="faq-q" data-i18n="faq.q6">¿Qué beneficios tiene?</summary><div class="faq-a"><p data-i18n="faq.a6">Mejor hidratación y minerales.</p></div></details>
+      <details class="faq-item"><summary class="faq-q" data-i18n="faq.q7">¿Cómo pido?</summary><div class="faq-a"><p data-i18n="faq.a7">Por WhatsApp, formulario o Instagram.</p></div></details>
+      <details class="faq-item"><summary class="faq-q" data-i18n="faq.q8">¿Tienen otros productos?</summary><div class="faq-a"><p data-i18n="faq.a8">Sí, cacao Tlaxquita semanal.</p></div></details>
+      <details class="faq-item"><summary class="faq-q" data-i18n="faq.q9">¿Dónde está su planta?</summary><div class="faq-a"><p data-i18n="faq.a9">Calle Teotlalpan #21, La Candelaria Teotlalpan.</p></div></details>
     </div>
   </div>
 </section>
@@ -571,67 +726,81 @@
 <section class="contact" id="contacto" aria-labelledby="cont-h">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Pide tu garrafón</div>
-      <h2 id="cont-h">Tu hidratación, a un mensaje de distancia</h2>
-      <p>Llena el formulario o escríbenos directo por WhatsApp — la opción más rápida.</p>
+      <div class="eyebrow" data-i18n="contact.eyebrow">Pide tu garrafón</div>
+      <h2 id="cont-h" data-i18n="contact.title">Tu hidratación, a un mensaje de distancia</h2>
+      <p data-i18n="contact.lead">Llena el formulario o escríbenos directo por WhatsApp.</p>
     </div>
     <div class="contact-grid">
       <div class="contact-info">
-        <h3>Contacto directo</h3>
+        <h3 data-i18n="contact.info_title">Contacto directo</h3>
         <div class="row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 1.13 4.18 2 2 0 0 1 3.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L7.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 21 16.92z"/></svg>
-          <div><strong>WhatsApp</strong><a href="https://wa.me/[WHATSAPP_E164]" target="_blank" rel="noopener">[WHATSAPP_DISPLAY]</a></div>
+          <div><strong data-i18n="contact.wa_label">WhatsApp</strong><a href="https://wa.me/[WHATSAPP_E164]" target="_blank" rel="noopener">[WHATSAPP_DISPLAY]</a></div>
         </div>
         <div class="row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          <div><strong>Dirección</strong><span>Calle Teotlalpan #21<br>La Candelaria Teotlalpan, Tlaxcala</span></div>
+          <div><strong data-i18n="contact.address_label">Dirección</strong><span data-i18n="contact.address_text" data-i18n-html>Calle Teotlalpan #21<br>La Candelaria Teotlalpan, Tlaxcala</span></div>
         </div>
         <div class="row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          <div><strong>Horario</strong><span>Lun – Vie: 9:00 – 18:00<br>Sábado: 9:00 – 14:00</span></div>
+          <div><strong data-i18n="contact.hours_label">Horario</strong><span data-i18n="contact.hours_text" data-i18n-html>Lun – Vie: 9:00 – 18:00<br>Sábado: 9:00 – 14:00</span></div>
         </div>
         <div class="row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          <div><strong>Instagram</strong><a href="https://www.instagram.com/nanovid.tlx/" target="_blank" rel="noopener">@nanovid.tlx</a></div>
+          <div><strong data-i18n="contact.ig_label">Instagram</strong><a href="https://www.instagram.com/nanovid.tlx/" target="_blank" rel="noopener">@nanovid.tlx</a></div>
         </div>
         <div class="actions">
-          <a class="btn btn-primary" href="https://wa.me/[WHATSAPP_E164]?text=Hola%20Nanovid" target="_blank" rel="noopener">Abrir WhatsApp</a>
-          <a class="btn btn-ghost" href="https://maps.google.com/?q=Calle+Teotlalpan+21+La+Candelaria+Teotlalpan+Tlaxcala" target="_blank" rel="noopener">Ver en Maps</a>
+          <a class="btn btn-primary" href="https://wa.me/[WHATSAPP_E164]?text=Hola%20Nanovid" target="_blank" rel="noopener" data-i18n="contact.open_wa">Abrir WhatsApp</a>
+          <a class="btn btn-ghost" href="https://maps.google.com/?q=Calle+Teotlalpan+21+La+Candelaria+Teotlalpan+Tlaxcala" target="_blank" rel="noopener" data-i18n="contact.view_maps">Ver en Maps</a>
         </div>
       </div>
       <form class="form" id="pedido-form" data-endpoint="https://formsubmit.co/ajax/dapovedag@gmail.com" novalidate>
-        <h3>Solicita tu pedido</h3>
-        <p class="helper">Te respondemos en menos de 30 minutos en horario laboral.</p>
+        <h3 data-i18n="form.title">Solicita tu pedido</h3>
+        <p class="helper" data-i18n="form.helper">Te respondemos en menos de 30 minutos.</p>
         <div class="field">
-          <label for="f-nombre">Nombre completo</label>
+          <label for="f-nombre" data-i18n="form.name">Nombre completo</label>
           <input id="f-nombre" name="nombre" type="text" required autocomplete="name">
         </div>
         <div class="field">
-          <label for="f-tel">WhatsApp</label>
+          <label for="f-tel" data-i18n="form.tel">WhatsApp</label>
           <input id="f-tel" name="telefono" type="tel" required autocomplete="tel" placeholder="246 123 4567">
         </div>
         <div class="field">
-          <label for="f-zona">Zona / Colonia</label>
-          <input id="f-zona" name="zona" type="text" required placeholder="Ej. Tizatlán, Totolac, Tlaxcala capital…">
+          <label for="f-zona" data-i18n="form.zone">Zona / Colonia</label>
+          <input id="f-zona" name="zona" type="text" required data-i18n="form.zone_ph" data-i18n-attr="placeholder" placeholder="Ej. Tizatlán, Totolac…">
         </div>
         <div class="field">
-          <label for="f-producto">Producto</label>
+          <label for="f-producto" data-i18n="form.product">Producto</label>
           <select id="f-producto" name="producto" required>
-            <option value="">Elige una opción…</option>
-            <option>AlcaVid 20L — Primera compra (con envase)</option>
-            <option>AlcaVid 20L — Recarga</option>
-            <option>2 o más garrafones</option>
-            <option>Cacao Tlaxquita ($30)</option>
-            <option>Otro / consulta</option>
+            <option value="" data-i18n="form.product_default">Elige una opción…</option>
+            <option data-i18n="form.p1">AlcaVid 20L — Primera compra</option>
+            <option data-i18n="form.p2">AlcaVid 20L — Recarga</option>
+            <option data-i18n="form.p3">2 o más garrafones</option>
+            <option data-i18n="form.p4">Cacao Tlaxquita ($30)</option>
+            <option data-i18n="form.p5">Suscripción mensual</option>
+            <option data-i18n="form.p6">Cotización para empresa</option>
           </select>
         </div>
         <div class="field">
-          <label for="f-msg">Mensaje (opcional)</label>
-          <textarea id="f-msg" name="mensaje" placeholder="Indicaciones, día preferido, cantidad…"></textarea>
+          <label for="f-msg" data-i18n="form.message">Mensaje (opcional)</label>
+          <textarea id="f-msg" name="mensaje" data-i18n="form.message_ph" data-i18n-attr="placeholder" placeholder="Indicaciones, día preferido…"></textarea>
         </div>
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-        <button class="btn btn-primary" type="submit">Enviar pedido</button>
+        <button class="btn btn-primary" type="submit" data-i18n="form.submit">Enviar pedido</button>
         <div class="form-msg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+
+    <!-- Newsletter -->
+    <div class="newsletter" style="margin-top:48px;">
+      <div>
+        <h3 data-i18n="newsletter.title">Tips de hidratación + ofertas en tu correo</h3>
+        <p data-i18n="newsletter.lead">Una vez al mes. Sin spam.</p>
+      </div>
+      <form id="news-form" data-endpoint="https://formsubmit.co/ajax/dapovedag@gmail.com">
+        <input type="email" name="email" required data-i18n="newsletter.placeholder" data-i18n-attr="placeholder" placeholder="tu@correo.com">
+        <button type="submit" data-i18n="newsletter.cta">Suscribirme</button>
+        <div class="news-msg" role="status" aria-live="polite" style="grid-column:1/-1;font-size:.88rem;margin-top:8px;"></div>
       </form>
     </div>
   </div>
@@ -644,7 +813,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <img src="assets/img/logo.svg" alt="Nanovid">
-        <p>Agua alcalina AlcaVid pH 8.7 a domicilio en Tlaxcala. Eleva tu hidratación con calidad verificada y reparto puntual.</p>
+        <p data-i18n="footer.brand_desc">Agua alcalina AlcaVid pH 8.7 a domicilio en Tlaxcala.</p>
         <div class="footer-social">
           <a href="https://www.instagram.com/nanovid.tlx/" target="_blank" rel="noopener" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
@@ -655,18 +824,18 @@
         </div>
       </div>
       <div>
-        <h4>Navegación</h4>
+        <h4 data-i18n="footer.nav_title">Navegación</h4>
         <ul>
-          <li><a href="#productos">Productos</a></li>
-          <li><a href="#beneficios">Beneficios pH 8.7</a></li>
-          <li><a href="#rutas">Rutas de reparto</a></li>
-          <li><a href="#cobertura">Cobertura Tlaxcala</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-          <li><a href="#contacto">Contacto</a></li>
+          <li><a href="#productos" data-i18n="footer.nav_products">Productos</a></li>
+          <li><a href="#beneficios" data-i18n="footer.nav_benefits">Beneficios pH 8.7</a></li>
+          <li><a href="#calculadora" data-i18n="nav.calc">Calculadora</a></li>
+          <li><a href="#empresas" data-i18n="nav.b2b">Empresas</a></li>
+          <li><a href="#suscripcion" data-i18n="subscription.eyebrow">Suscripción</a></li>
+          <li><a href="#faq" data-i18n="footer.nav_faq">FAQ</a></li>
         </ul>
       </div>
       <div>
-        <h4>Contacto</h4>
+        <h4 data-i18n="footer.contact_title">Contacto</h4>
         <ul>
           <li><a href="https://wa.me/[WHATSAPP_E164]" target="_blank" rel="noopener">WhatsApp [WHATSAPP_DISPLAY]</a></li>
           <li>Calle Teotlalpan #21</li>
@@ -677,17 +846,17 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; <span id="year">2026</span> Nanovid · Agua Alcalina AlcaVid · Tlaxcala, México.</span>
-      <a href="privacidad.html">Aviso de privacidad</a>
+      <span>&copy; <span id="year">2026</span> <span data-i18n="footer.copyright">Nanovid · Agua Alcalina AlcaVid · Tlaxcala, México.</span></span>
+      <a href="privacidad.html" data-i18n="footer.privacy">Aviso de privacidad</a>
     </div>
   </div>
 </footer>
 
-<!-- WhatsApp flotante -->
 <a class="wa-float" href="https://wa.me/[WHATSAPP_E164]?text=Hola%20Nanovid%2C%20quiero%20pedir%20mi%20garraf%C3%B3n" target="_blank" rel="noopener" aria-label="Abrir WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 0 0 1.51 5.26l-.999 3.648 3.978-1.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.371-.025-.520-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.247-.694.247-1.289.173-1.413z"/></svg>
 </a>
 
+<script src="js/i18n.js"></script>
 <script src="js/main.js" defer></script>
 </body>
 </html>
