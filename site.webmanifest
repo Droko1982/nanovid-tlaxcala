@@ -1,0 +1,14 @@
+{
+  "name": "Nanovid — Agua Alcalina pH 8.7 en Tlaxcala",
+  "short_name": "Nanovid",
+  "description": "Reparto a domicilio de agua alcalina AlcaVid pH 8.7 en Tlaxcala.",
+  "start_url": "/nanovid-tlaxcala/",
+  "scope": "/nanovid-tlaxcala/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0AAEE0",
+  "lang": "es-MX",
+  "icons": [
+    { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
