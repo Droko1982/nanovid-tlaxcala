@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" role="img" aria-label="Nanovid">
+  <title>Nanovid</title>
+  <g font-family="'Plus Jakarta Sans','Inter',system-ui,sans-serif" font-weight="700" font-size="48">
+    <text x="0" y="46" fill="#0AAEE0" letter-spacing="-1.5">nano</text>
+    <text x="118" y="46" fill="#8DC63F" letter-spacing="-1.5">vid</text>
+  </g>
+  <path d="M205 16 c-4 6 -6 10 -6 14 a6 6 0 0 0 12 0 c0 -4 -2 -8 -6 -14z" fill="#0AAEE0"/>
+</svg>
