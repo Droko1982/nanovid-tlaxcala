@@ -95,7 +95,19 @@ nanovid-tlaxcala/
     └── favicon.svg
 ```
 
-## 📸 Cómo subir tus fotos reales
+## 📸 Estado actual de las fotos
+
+**Provisionales (Unsplash, libres de uso comercial)** — están en producción ahora mismo:
+
+| Archivo | Foto | Crédito |
+|---|---|---|
+| `assets/img/alcavid-garrafon.jpg` | Rejilla con garrafones azules de 19L | [Daniela Flores](https://unsplash.com/photos/uSwNhLJaekc) en Unsplash |
+| `assets/img/tlaxquita-cacao.jpg` | Manos sosteniendo granos de cacao | [Pablo Merchán Montes](https://unsplash.com/photos/SCbq6uKCyMY) en Unsplash |
+| `assets/img/og-cover.jpg` | Garrafones (vista horizontal para social) | Daniela Flores en Unsplash |
+
+> Estas fotos son **placeholders profesionales**. La licencia de Unsplash permite uso comercial sin atribución, pero damos crédito por buena práctica. Reemplázalas con tus fotos reales de Nanovid (Camino A o B abajo) cuando puedas — el sitio las reconoce automáticamente.
+
+## 🔁 Cómo reemplazarlas con tus fotos reales
 
 El sitio ya está listo para recibir fotos reales. Mientras los archivos no existan, se muestra un SVG decorativo. En cuanto subes el archivo con el nombre exacto, la foto aparece automáticamente — sin tocar el HTML.
 
