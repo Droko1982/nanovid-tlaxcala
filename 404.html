@@ -7,6 +7,9 @@
 <title>Página no encontrada — Nanovid Tlaxcala</title>
 <meta name="robots" content="noindex,follow">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
 <script>
 (function () {
@@ -17,26 +20,54 @@
 })();
 </script>
 <style>
-.err-wrap { min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 60px 24px; }
-.err-wrap h1 { font-size: clamp(3rem, 10vw, 6rem); color: var(--blue); margin-bottom: 8px; }
-.err-wrap p { font-size: 1.15rem; max-width: 540px; margin: 0 auto 24px; }
+.err-wrap {
+  position: relative; min-height: 80vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 60px 24px;
+}
+.err-wrap > div { position: relative; z-index: 2; max-width: 620px; }
+.err-num {
+  font-size: clamp(5rem, 18vw, 10rem); font-weight: 800; line-height: 1;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--green) 100%);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+.err-wrap h2 { font-size: clamp(1.4rem, 3.5vw, 2rem); margin-bottom: 14px; }
+.err-wrap p { font-size: 1.1rem; max-width: 540px; margin: 0 auto 28px; color: var(--ink-soft); }
 .err-wrap .ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.drop-svg { margin: 0 auto 18px; opacity: .9; }
 </style>
 </head>
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a href="index.html" class="brand"><img src="assets/img/logo.svg" alt="Nanovid"></a>
+    <a href="index.html" class="brand" aria-label="Nanovid">
+      <img src="assets/img/logo.svg" alt="Nanovid" width="140" height="40">
+      <span class="brand-tag">Tlaxcala</span>
+    </a>
+    <a class="btn btn-ghost btn-sm" href="index.html">← Inicio</a>
   </div>
 </header>
-<main class="err-wrap">
+<main class="err-wrap err-bg">
   <div>
-    <h1>404</h1>
+    <svg class="drop-svg" width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="dg" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stop-color="#0AAEE0"/>
+          <stop offset="1" stop-color="#8DC63F"/>
+        </linearGradient>
+      </defs>
+      <path d="M40 8 C30 24 22 36 22 48 a18 18 0 0 0 36 0 C58 36 50 24 40 8z" fill="url(#dg)"/>
+      <path d="M30 50 a10 10 0 0 0 10 10" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" opacity=".6"/>
+    </svg>
+    <div class="err-num">404</div>
     <h2>Esta página se evaporó</h2>
     <p>Lo sentimos, la página que buscas no está aquí. Pero el agua alcalina sí — vuelve al inicio para pedir tu garrafón.</p>
     <div class="ctas">
       <a class="btn btn-primary" href="index.html">Volver al inicio</a>
       <a class="btn btn-ghost" href="index.html#productos">Ver productos</a>
+      <a class="btn btn-secondary" href="https://wa.me/[WHATSAPP_E164]?text=Hola%20Nanovid" target="_blank" rel="noopener">WhatsApp</a>
     </div>
   </div>
 </main>

@@ -97,9 +97,19 @@
   const langMenu = document.querySelector('.lang-menu');
   langBtn?.addEventListener('click', (e) => {
     e.stopPropagation();
-    langMenu?.classList.toggle('open');
+    const open = langMenu?.classList.toggle('open');
+    langBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
-  document.addEventListener('click', () => langMenu?.classList.remove('open'));
+  document.addEventListener('click', () => {
+    langMenu?.classList.remove('open');
+    langBtn?.setAttribute('aria-expanded', 'false');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      langMenu?.classList.remove('open');
+      langBtn?.setAttribute('aria-expanded', 'false');
+    }
+  });
 
   // Apply initial translation
   if (window.NANOVID_I18N) applyI18n();
@@ -167,9 +177,9 @@
       msg.className = 'form-msg';
       msg.textContent = '';
       const submitBtn = form.querySelector('button[type="submit"]');
-      const originalLabel = submitBtn.textContent;
+      const originalHTML = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.textContent = '…';
+      submitBtn.innerHTML = '<span class="spinner" aria-hidden="true"></span>';
       const data = Object.fromEntries(new FormData(form));
       const endpoint = form.dataset.endpoint;
       try {
@@ -193,7 +203,7 @@
         msg.textContent = t('form.err');
       } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = originalLabel;
+        submitBtn.innerHTML = originalHTML;
       }
     });
   }
@@ -208,6 +218,13 @@
       e.preventDefault();
       newsMsg.className = 'news-msg';
       newsMsg.textContent = '';
+      // Validar consentimiento
+      const consent = news.querySelector('input[name="consent"]');
+      if (consent && !consent.checked) {
+        newsMsg.style.color = '#fff';
+        newsMsg.textContent = '⚠ ' + (t('consent.text') + t('consent.privacy'));
+        return;
+      }
       const data = Object.fromEntries(new FormData(news));
       try {
         const res = await fetch(news.dataset.endpoint, {
@@ -225,5 +242,67 @@
         newsMsg.textContent = t('newsletter.err');
       }
     });
+  }
+
+  // ============================================================
+  // PROMO BAR · dismiss persistente
+  // ============================================================
+  const promo = document.querySelector('.promo-bar');
+  const promoBtn = document.querySelector('.promo-dismiss');
+  if (promo && localStorage.getItem('nv-promo-hidden') === '1') {
+    promo.classList.add('hidden');
+  }
+  promoBtn?.addEventListener('click', () => {
+    promo.classList.add('hidden');
+    localStorage.setItem('nv-promo-hidden', '1');
+  });
+
+  // ============================================================
+  // SCROLL REVEAL · IntersectionObserver
+  // Auto-inyecta clases reveal en bloques clave para no tocar HTML
+  // ============================================================
+  document.querySelectorAll('.section-head').forEach(el => el.classList.add('reveal'));
+  document.querySelectorAll(
+    '.product-grid, .benefits-grid, .steps, .testi-grid, .pricing-grid, .blog-grid, .diff-grid, .routes-grid, .b2b-grid'
+  ).forEach(el => el.classList.add('reveal-stagger'));
+  document.querySelectorAll('.subscription, .compare-wrap, .calc, .coverage-list, .cultura, .newsletter').forEach(el => el.classList.add('reveal'));
+
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduceMotion && 'IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+  } else {
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => el.classList.add('in'));
+  }
+
+  // ============================================================
+  // SCROLL SPY · resalta sección activa en nav
+  // ============================================================
+  const navLinkEls = document.querySelectorAll('.nav-links a[href^="#"]');
+  const sectionMap = new Map();
+  navLinkEls.forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    const sec = document.getElementById(id);
+    if (sec) sectionMap.set(sec, a);
+  });
+  if (sectionMap.size && 'IntersectionObserver' in window) {
+    const spy = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const link = sectionMap.get(entry.target);
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinkEls.forEach(a => a.removeAttribute('aria-current'));
+          link.setAttribute('aria-current', 'true');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    sectionMap.forEach((_, sec) => spy.observe(sec));
   }
 })();
