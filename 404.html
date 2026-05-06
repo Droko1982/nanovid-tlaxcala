@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="es-MX">
+<html lang="es-MX" data-theme="light">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
 <title>Página no encontrada — Nanovid Tlaxcala</title>
 <meta name="robots" content="noindex,follow">
 <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 <link rel="stylesheet" href="css/styles.css">
+<script>
+(function () {
+  try {
+    var t = localStorage.getItem('nv-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', t);
+  } catch (e) {}
+})();
+</script>
 <style>
 .err-wrap { min-height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 60px 24px; }
 .err-wrap h1 { font-size: clamp(3rem, 10vw, 6rem); color: var(--blue); margin-bottom: 8px; }
