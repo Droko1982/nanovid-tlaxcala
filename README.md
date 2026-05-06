@@ -95,13 +95,33 @@ nanovid-tlaxcala/
     └── favicon.svg
 ```
 
-## Imágenes recomendadas para subir
+## 📸 Cómo subir tus fotos reales
 
-Mejoran conversión y SEO. Sube a `assets/img/`:
+El sitio ya está listo para recibir fotos reales. Mientras los archivos no existan, se muestra un SVG decorativo. En cuanto subes el archivo con el nombre exacto, la foto aparece automáticamente — sin tocar el HTML.
 
-- `og-cover.jpg` (1200×630) — portada al compartir el link en WhatsApp/Facebook
-- `alcavid.jpg` — foto real del garrafón
-- `tlaxquita.jpg` — foto del cacao
+**Pasos para tu Instagram → web:**
+
+1. Abre Instagram en tu teléfono → entra a tu post de cada producto
+2. Toca los 3 puntos (`⋯`) → "Guardar foto" (o haz screenshot del post)
+3. Manda la foto a tu computadora (correo, AirDrop, WhatsApp Web, etc.)
+4. **Recórtala cuadrada** (1:1) o 4:5 a ~1200×1200 px (Photoshop, Canva o GIMP gratis)
+5. Guarda como JPG en `nanovid-tlaxcala/assets/img/` con el nombre exacto:
+
+| Archivo | Para qué | Tamaño recomendado |
+|---|---|---|
+| `alcavid-garrafon.jpg` | Tarjeta del producto AlcaVid | 1200×1200 px (cuadrado) |
+| `tlaxquita-cacao.jpg` | Tarjeta del producto Tlaxquita | 1200×1200 px (cuadrado) |
+| `og-cover.jpg` | Vista previa al compartir el link en WhatsApp/Facebook/Twitter | **1200×630 px exacto** (Instagram no sirve, el aspecto es distinto) |
+
+6. Push a GitHub: `git add assets/img/ && git commit -m "chore: fotos reales de productos" && git push`
+7. En 30-60 segundos las fotos aparecen en producción.
+
+**Tip OG cover**: combina logo + garrafón + texto "Agua Alcalina pH 8.7 · Tlaxcala" en Canva (template "Facebook Post" 1200×630). Es la imagen que se ve cuando alguien comparte el link.
+
+> ⚠️ Los archivos no se versionan binarios pesados — mantenlas bajo 300 KB cada una. Usa [tinyjpg.com](https://tinyjpg.com) gratis.
+
+### Si no puedes editar fotos
+Mándame las fotos directamente en este chat (arrástralas a la conversación) y yo las guardo en el repo con el nombre y formato correctos.
 
 ## Comandos útiles
 
