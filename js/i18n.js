@@ -301,6 +301,7 @@ window.NANOVID_I18N = {
       nav_routes: "Rutas de reparto", nav_coverage: "Cobertura Tlaxcala", nav_faq: "FAQ", nav_contact: "Contacto",
       copyright: "Nanovid · Agua Alcalina AlcaVid · Tlaxcala, México.",
       privacy: "Aviso de privacidad",
+      made_by: "Sitio hecho por",
     },
   },
 
@@ -539,6 +540,7 @@ window.NANOVID_I18N = {
       nav_routes: "Delivery routes", nav_coverage: "Tlaxcala coverage", nav_faq: "FAQ", nav_contact: "Contact",
       copyright: "Nanovid · AlcaVid Alkaline Water · Tlaxcala, Mexico.",
       privacy: "Privacy notice",
+      made_by: "Website by",
     },
   },
 
